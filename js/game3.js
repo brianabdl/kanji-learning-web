@@ -149,10 +149,10 @@ function loadHighScores() {
     const highScoresList = document.getElementById('highScores');
     
     if (highScores.length === 0) {
-        highScoresList.innerHTML = '<li class="text-muted">No scores yet!</li>';
+        highScoresList.innerHTML = '<li class="text-muted">Belum ada skor!</li>';
     } else {
         highScoresList.innerHTML = highScores.map(score => 
-            `<li>${score.name}: <strong>${score.score}</strong> points (${score.date})</li>`
+            `<li>${score.name}: <strong>${score.score}</strong> poin (${score.date})</li>`
         ).join('');
     }
 }

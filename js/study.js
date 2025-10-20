@@ -3,7 +3,11 @@ let currentKanjiIndex = 0;
 let currentTestAnswer = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    displayUsername();
+    
+    // Call display username if on a page with the element
+    if (document.getElementById('welcomeText')) {
+        displayUsername();
+    }
     loadKanji(currentKanjiIndex);
     generateTest();
     
@@ -23,6 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Utility function to display username
+function displayUsername() {
+    const username = localStorage.getItem('kanjiUsername');
+    const welcomeElement = document.getElementById('welcomeText');
+    if (welcomeElement && username) {
+        welcomeElement.textContent = `Selamat datang, ${username}!`;
+    }
+
+    welcomeElement.addEventListener('click', () => {
+        // logout
+        localStorage.removeItem('kanjiUsername');
+        window.location.href = 'index.html';
+    });
+}
+
 
 function loadKanji(index) {
     const kanji = kanjiData[index];
@@ -82,11 +102,11 @@ function checkTestAnswer(selectedAnswer, button) {
     if (selectedAnswer === currentTestAnswer) {
         button.classList.remove('btn-outline-primary');
         button.classList.add('btn-success');
-        testResult.innerHTML = '<div class="alert alert-success">✓ Correct! Great job!</div>';
+        testResult.innerHTML = '<div class="alert alert-success">✓ Benar! Bagus sekali!</div>';
     } else {
         button.classList.remove('btn-outline-primary');
         button.classList.add('btn-danger');
-        testResult.innerHTML = `<div class="alert alert-danger">✗ Incorrect. The correct answer is: ${currentTestAnswer}</div>`;
+        testResult.innerHTML = `<div class="alert alert-danger">✗ Salah. Jawaban yang benar adalah: ${currentTestAnswer}</div>`;
     }
     
     // Generate new test after 2 seconds

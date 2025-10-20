@@ -145,9 +145,9 @@ function endGame(completed) {
     
     let message = '';
     if (completed) {
-        message = `🎉 Congratulations! You matched all pairs!<br>Final Score: ${score}<br>Time Remaining: ${timeLeft}s`;
+        message = `🎉 Selamat! Anda berhasil mencocokkan semua pasangan!<br>Skor Akhir: ${score}<br>Waktu Tersisa: ${timeLeft}d`;
     } else {
-        message = `⏰ Time's up!<br>You matched ${matchedPairs} out of ${totalPairs} pairs.<br>Final Score: ${score}`;
+        message = `⏰ Waktu habis!<br>Anda mencocokkan ${matchedPairs} dari ${totalPairs} pasangan.<br>Skor Akhir: ${score}`;
     }
     
     document.getElementById('finalScore').innerHTML = message;

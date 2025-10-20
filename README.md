@@ -1,48 +1,48 @@
-# Kanji Learning Website
+# Website Belajar Kanji
 
-A simple, interactive website for learning Japanese Kanji characters with mini-games.
+Website interaktif sederhana untuk mempelajari karakter Kanji Jepang dengan mini-game.
 
-## Features
+## Fitur
 
-### 1. **Welcome Page (index.html)**
-- Username input for personalized experience
-- Clean, modern interface with Bootstrap styling
+### 1. **Halaman Selamat Datang (index.html)**
+- Input nama pengguna untuk pengalaman yang dipersonalisasi
+- Antarmuka modern dan bersih dengan styling Bootstrap
 
-### 2. **Study Page (study.html)**
-- Browse through 15 basic Kanji characters
-- View reading (pronunciation), meaning, and example usage
-- Quick test to reinforce learning
-- Navigation between characters
+### 2. **Halaman Belajar (study.html)**
+- Jelajahi 15 karakter Kanji dasar
+- Lihat pembacaan (pengucapan), arti, dan contoh penggunaan
+- Tes cepat untuk memperkuat pembelajaran
+- Navigasi antar karakter
 
-### 3. **Three Mini-Games**
+### 3. **Tiga Mini-Game**
 
-#### 🎯 Word Builder (game1.html)
-- Build compound words by selecting kanji in the correct order
-- Target meaning is shown
-- Select kanji characters to form the word
-- Score tracking
+#### 🔢 Belajar Angka (game1.html)
+- Pengenalan angka 1-10 dalam Kanji
+- Latihan menebak angka dalam bentuk Kanji
+- Sistem skor dan umpan balik
+- Maksimal 10 pertanyaan per sesi
 
-#### 🔗 Kanji Match (game2.html)
-- Match kanji characters with their meanings
-- 60-second time limit
-- Click kanji and meaning to create pairs
-- Score: 10 points per match
+#### 🔗 Pasangkan Kanji (game2.html)
+- Cocokkan karakter kanji dengan artinya
+- Batas waktu 60 detik
+- Klik kanji dan arti untuk membuat pasangan
+- Skor: 10 poin per pasangan
 
-#### ⚡ Speed Quiz (game3.html)
-- Answer as many questions as possible in 60 seconds
-- Multiple choice questions
-- High score tracking with localStorage
-- Top 5 leaderboard
+#### ⚡ Kuis Cepat (game3.html)
+- Jawab sebanyak mungkin pertanyaan dalam 60 detik
+- Pertanyaan pilihan ganda
+- Pelacakan skor tertinggi dengan localStorage
+- Papan peringkat 5 teratas
 
-## Technology Stack
+## Teknologi yang Digunakan
 
-- **HTML5**: Structure and content
-- **Bootstrap 5.3.2**: Responsive design and UI components (via CDN)
-- **JavaScript**: Interactive functionality and game logic
-- **CSS3**: Custom styling and animations
-- **LocalStorage**: Username and high score persistence
+- **HTML5**: Struktur dan konten
+- **Bootstrap 5.3.2**: Desain responsif dan komponen UI (via CDN)
+- **JavaScript**: Fungsi interaktif dan logika permainan
+- **CSS3**: Styling kustom dan animasi
+- **LocalStorage**: Penyimpanan nama pengguna dan skor tertinggi
 
-## File Structure
+## Struktur File
 
 ```
 Project_PBJepang/
@@ -62,18 +62,18 @@ Project_PBJepang/
     └── game3.js        # Speed Quiz game logic
 ```
 
-## How to Use
+## Cara Menggunakan
 
-1. Open `index.html` in a web browser
-2. Enter your name to begin
-3. Study kanji characters on the study page
-4. Take the quick tests to reinforce learning
-5. Play the three mini-games to practice
-6. Try to beat your high score!
+1. Buka `index.html` di web browser
+2. Masukkan nama Anda untuk memulai
+3. Pelajari karakter kanji di halaman belajar
+4. Ikuti tes cepat untuk memperkuat pembelajaran
+5. Mainkan tiga mini-game untuk berlatih
+6. Coba kalahkan skor tertinggi Anda!
 
-## Kanji Included
+## Kanji yang Tersedia
 
-The website includes 15 basic kanji characters:
+Website ini mencakup 15 karakter kanji dasar:
 - 日 (sun, day)
 - 月 (moon, month)
 - 火 (fire)
@@ -90,33 +90,34 @@ The website includes 15 basic kanji characters:
 - 校 (school)
 - 生 (life, birth)
 
-## Features
+## Fitur Utama
 
-- ✅ No installation required - runs directly in browser
-- ✅ No server needed - pure client-side application
-- ✅ Responsive design - works on mobile and desktop
-- ✅ Uses CDN for Bootstrap - no npm or build process
-- ✅ Persistent username and high scores
-- ✅ Interactive and engaging learning experience
+- ✅ Tidak perlu instalasi - langsung berjalan di browser
+- ✅ Tidak perlu server - aplikasi client-side murni
+- ✅ Desain responsif - berfungsi di mobile dan desktop
+- ✅ Menggunakan CDN untuk Bootstrap - tanpa npm atau proses build
+- ✅ Nama pengguna dan skor tertinggi persisten
+- ✅ Pengalaman belajar interaktif dan menarik
+- ✅ Bahasa Indonesia sebagai bahasa utama
 
-## Browser Compatibility
+## Kompatibilitas Browser
 
-Works on all modern browsers:
+Berfungsi di semua browser modern:
 - Chrome
 - Firefox
 - Safari
 - Edge
 
-## Future Enhancements
+## Pengembangan Masa Depan
 
-Potential additions:
-- More kanji characters
-- Additional game modes
-- Audio pronunciation
-- Writing practice (stroke order)
-- Progress tracking
-- Difficulty levels
+Penambahan potensial:
+- Lebih banyak karakter kanji
+- Mode permainan tambahan
+- Pengucapan audio
+- Latihan menulis (urutan goresan)
+- Pelacakan kemajuan
+- Tingkat kesulitan
 
-## License
+## Lisensi
 
-Free to use for educational purposes.
+Gratis untuk digunakan untuk tujuan pendidikan.

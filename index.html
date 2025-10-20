@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanji Learning - Welcome</title>
+    <title>Belajar Kanji - Selamat Datang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,20 +15,20 @@
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
                             <h1 class="kanji-title">漢字</h1>
-                            <h2 class="mb-3">Kanji Learning</h2>
-                            <p class="text-muted">Begin your journey to master Japanese characters</p>
+                            <h2 class="mb-3">Belajar Kanji</h2>
+                            <p class="text-muted">Mulai perjalanan Anda untuk menguasai huruf Jepang</p>
                         </div>
                         
                         <form id="usernameForm">
                             <div class="mb-4">
-                                <label for="username" class="form-label">Enter Your Name</label>
+                                <label for="username" class="form-label">Masukkan Nama Anda</label>
                                 <input type="text" class="form-control form-control-lg" id="username" 
-                                       placeholder="Your name" required minlength="2">
-                                <div class="form-text">This will be used to personalize your experience</div>
+                                       placeholder="Nama Anda" required minlength="2">
+                                <div class="form-text">Ini akan digunakan untuk mempersonalisasi pengalaman Anda</div>
                             </div>
                             
                             <button type="submit" class="btn btn-primary btn-lg w-100">
-                                Start Learning
+                                Mulai Belajar
                             </button>
                         </form>
                     </div>
@@ -36,7 +36,7 @@
                 
                 <div class="text-center mt-4">
                     <p class="text-muted">
-                        <small>Learn kanji characters through interactive lessons and fun games!</small>
+                        <small>Pelajari karakter kanji melalui pelajaran interaktif dan permainan yang menyenangkan!</small>
                     </p>
                 </div>
             </div>
@@ -54,6 +54,12 @@
                 window.location.href = 'study.html';
             }
         });
+
+        // Auto-redirect if username already exists
+        const existingUsername = localStorage.getItem('kanjiUsername');
+        if (existingUsername) {
+            window.location.href = 'study.html';
+        }
     </script>
 </body>
 </html>

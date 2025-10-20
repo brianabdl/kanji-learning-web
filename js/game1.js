@@ -83,7 +83,7 @@ function loadIntroKanji(index) {
 
 function startQuiz() {
     score = 0;
-    totalQuestions = 0;
+    totalQuestions = 10;
     askedQuestions = [];
     document.getElementById('score').textContent = score;
     document.getElementById('total').textContent = totalQuestions;
@@ -138,8 +138,8 @@ function loadQuizQuestion() {
 }
 
 function checkAnswer(selectedNumber, button) {
-    totalQuestions++;
-    document.getElementById('total').textContent = totalQuestions;
+    // totalQuestions++;
+    // document.getElementById('total').textContent = totalQuestions;
     
     // Disable all buttons
     const allButtons = document.querySelectorAll('#quizOptions button');
