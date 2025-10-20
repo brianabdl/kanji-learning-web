@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container">
+            <a class="navbar-brand text-dark" href="study.html">← Back to Study</a>
+            <span class="navbar-text text-dark">⚡ Speed Quiz</span>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-warning">
+                        <h3 class="mb-0">Speed Quiz Game</h3>
+                        <p class="mb-0 mt-2">Answer as many questions as you can in 60 seconds!</p>
+                    </div>
+                    <div class="card-body">
+                        <div id="startScreen" class="text-center">
+                            <h4 class="mb-4">Ready to test your kanji knowledge?</h4>
+                            <button class="btn btn-warning btn-lg" id="startBtn">Start Quiz</button>
+                        </div>
+
+                        <div id="quizScreen" style="display:none;">
+                            <div class="mb-4 d-flex justify-content-between">
+                                <div>
+                                    <strong>Time Left:</strong> <span id="timeLeft" class="badge bg-danger">60</span>s
+                                </div>
+                                <div>
+                                    <strong>Score:</strong> <span id="score" class="badge bg-success">0</span>
+                                </div>
+                                <div>
+                                    <strong>Question:</strong> <span id="questionNum" class="badge bg-primary">1</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center mb-4">
+                                <div class="kanji-character-large display-1 mb-3" id="quizKanji"></div>
+                            </div>
+
+                            <div id="quizOptions" class="d-grid gap-2"></div>
+                        </div>
+
+                        <div id="resultScreen" class="text-center" style="display:none;">
+                            <h3 class="mb-4">Time's Up!</h3>
+                            <div class="alert alert-info">
+                                <h4>Final Score: <span id="finalScore"></span></h4>
+                                <p class="mb-0">Questions Answered: <span id="totalQuestions"></span></p>
+                            </div>
+                            <button class="btn btn-warning btn-lg" id="playAgainBtn">Play Again</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow mt-4">
+                    <div class="card-body">
+                        <h5>High Scores</h5>
+                        <ol id="highScores" class="mb-0">
+                            <li class="text-muted">No scores yet!</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/kanjiData.js"></script>
+    <script src="js/game3.js"></script>
+</body>
+</html>

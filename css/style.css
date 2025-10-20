@@ -1,0 +1,201 @@
+/* Custom Styles for Kanji Learning Website */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Kanji Character Styles */
+.kanji-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.kanji-character {
+    font-size: 8rem !important;
+    font-weight: bold;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.kanji-character:hover {
+    transform: scale(1.1);
+}
+
+.kanji-character-large {
+    font-size: 6rem !important;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Game Specific Styles */
+.answer-area {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.min-height-100 {
+    min-height: 100px;
+}
+
+.kanji-button {
+    font-size: 2rem;
+    padding: 15px 25px;
+    min-width: 80px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.kanji-button:hover {
+    transform: scale(1.05);
+}
+
+.kanji-button.selected {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.selected-kanji {
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #0d6efd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.selected-kanji:hover {
+    background-color: #ffebee;
+}
+
+/* Match Game Styles */
+.match-btn {
+    font-size: 1.5rem;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.match-btn.selected {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    transform: scale(1.05);
+}
+
+.match-btn.matched {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Quiz Options */
+.quiz-option {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+    transform: scale(1.02);
+}
+
+.quiz-option.correct {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: white !important;
+}
+
+.quiz-option.wrong {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+/* Alert Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert {
+    animation: slideIn 0.3s ease;
+}
+
+/* Progress Bar */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kanji-character {
+        font-size: 5rem !important;
+    }
+    
+    .kanji-character-large {
+        font-size: 4rem !important;
+    }
+    
+    .kanji-button {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        min-width: 60px;
+    }
+}
+
+/* Utility Classes */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
