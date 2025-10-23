@@ -1,6 +1,6 @@
-// Game 2: Kanji Match
+// Game 2: Image to Kanji Match
+let selectedImage = null;
 let selectedKanji = null;
-let selectedMeaning = null;
 let matchedPairs = 0;
 let score = 0;
 let totalPairs = 0;
@@ -22,37 +22,78 @@ function initGame() {
     const selectedKanjiData = getRandomElements(kanjiData, 6);
     totalPairs = selectedKanjiData.length;
     
-    // Create kanji buttons
-    const kanjiColumn = document.getElementById('kanjiColumn');
-    const kanjiButtons = selectedKanjiData.map((item, index) => {
-        return { kanji: item.kanji, id: `kanji-${index}`, meaning: item.meaning };
+    // Create image buttons
+    const imageColumn = document.getElementById('imageColumn');
+    const imageButtons = selectedKanjiData.map((item, index) => {
+        return { imagePath: item.imagePath, kanji: item.kanji, id: `image-${index}`, meaning: item.meaning };
     });
+    
+    imageButtons.forEach(item => {
+        const button = document.createElement('button');
+        button.className = 'btn btn-outline-primary match-btn image-card';
+        
+        // Create image element
+        const img = document.createElement('img');
+        img.src = item.imagePath;
+        img.alt = item.meaning;
+        img.className = 'match-image';
+        img.onerror = function() {
+            // Fallback if image not found - show meaning text instead
+            this.style.display = 'none';
+            const fallback = document.createElement('div');
+            fallback.className = 'image-fallback';
+            fallback.textContent = item.meaning;
+            this.parentElement.appendChild(fallback);
+        };
+        
+        button.appendChild(img);
+        button.dataset.id = item.id;
+        button.dataset.kanji = item.kanji;
+        button.addEventListener('click', () => selectImageButton(button));
+        imageColumn.appendChild(button);
+    });
+    
+    // Create kanji buttons (shuffled)
+    const kanjiColumn = document.getElementById('kanjiColumn');
+    const kanjiButtons = shuffleArray(selectedKanjiData.map((item, index) => {
+        return { kanji: item.kanji, id: `kanji-${index}`, reading: item.reading };
+    }));
     
     kanjiButtons.forEach(item => {
         const button = document.createElement('button');
-        button.className = 'btn btn-outline-primary match-btn';
-        button.textContent = item.kanji;
+        button.className = 'btn btn-outline-secondary match-btn kanji-card';
+        
+        // Create kanji display
+        const kanjiText = document.createElement('div');
+        kanjiText.className = 'kanji-large';
+        kanjiText.textContent = item.kanji;
+        button.appendChild(kanjiText);
+        
+        // Create reading display
+        const readingText = document.createElement('div');
+        readingText.className = 'kanji-reading';
+        readingText.textContent = item.reading;
+        button.appendChild(readingText);
+        
         button.dataset.id = item.id;
-        button.dataset.meaning = item.meaning;
+        button.dataset.kanji = item.kanji;
         button.addEventListener('click', () => selectKanjiButton(button));
         kanjiColumn.appendChild(button);
     });
+}
+
+function selectImageButton(button) {
+    if (!gameActive || button.classList.contains('matched')) return;
     
-    // Create meaning buttons (shuffled)
-    const meaningColumn = document.getElementById('meaningColumn');
-    const meaningButtons = shuffleArray(selectedKanjiData.map((item, index) => {
-        return { meaning: item.meaning, id: `meaning-${index}`, kanji: item.kanji };
-    }));
+    // Deselect previous image if any
+    if (selectedImage) {
+        selectedImage.classList.remove('selected');
+    }
     
-    meaningButtons.forEach(item => {
-        const button = document.createElement('button');
-        button.className = 'btn btn-outline-secondary match-btn';
-        button.textContent = item.meaning;
-        button.dataset.id = item.id;
-        button.dataset.kanji = item.kanji;
-        button.addEventListener('click', () => selectMeaningButton(button));
-        meaningColumn.appendChild(button);
-    });
+    selectedImage = button;
+    button.classList.add('selected');
+    
+    checkMatch();
 }
 
 function selectKanjiButton(button) {
@@ -69,33 +110,18 @@ function selectKanjiButton(button) {
     checkMatch();
 }
 
-function selectMeaningButton(button) {
-    if (!gameActive || button.classList.contains('matched')) return;
-    
-    // Deselect previous meaning if any
-    if (selectedMeaning) {
-        selectedMeaning.classList.remove('selected');
-    }
-    
-    selectedMeaning = button;
-    button.classList.add('selected');
-    
-    checkMatch();
-}
-
 function checkMatch() {
-    if (!selectedKanji || !selectedMeaning) return;
+    if (!selectedImage || !selectedKanji) return;
     
-    const kanjiMeaning = selectedKanji.dataset.meaning;
-    const meaningKanji = selectedMeaning.dataset.kanji;
+    const imageKanji = selectedImage.dataset.kanji;
+    const kanjiChar = selectedKanji.dataset.kanji;
     
-    if (kanjiMeaning === selectedMeaning.textContent && 
-        meaningKanji === selectedKanji.textContent) {
+    if (imageKanji === kanjiChar) {
         // Match!
+        selectedImage.classList.remove('selected');
+        selectedImage.classList.add('matched');
         selectedKanji.classList.remove('selected');
         selectedKanji.classList.add('matched');
-        selectedMeaning.classList.remove('selected');
-        selectedMeaning.classList.add('matched');
         
         matchedPairs++;
         score += 10;
@@ -107,15 +133,15 @@ function checkMatch() {
             endGame(true);
         }
         
+        selectedImage = null;
         selectedKanji = null;
-        selectedMeaning = null;
     } else {
         // No match - deselect after a short delay
         setTimeout(() => {
+            if (selectedImage) selectedImage.classList.remove('selected');
             if (selectedKanji) selectedKanji.classList.remove('selected');
-            if (selectedMeaning) selectedMeaning.classList.remove('selected');
+            selectedImage = null;
             selectedKanji = null;
-            selectedMeaning = null;
         }, 500);
     }
 }

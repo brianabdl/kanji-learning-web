@@ -76,90 +76,105 @@ const kanjiNumbers = [
 const kanjiData = [
     {
         kanji: '日',
+        imagePath: 'images/sun.jpg',
         reading: 'nichi, jitsu / hi',
         meaning: 'sun, day',
         example: '日本 (nihon) = Japan'
     },
     {
         kanji: '月',
+        imagePath: 'images/moon.jpg',
         reading: 'getsu, gatsu / tsuki',
         meaning: 'moon, month',
         example: '一月 (ichigatsu) = January'
     },
     {
         kanji: '火',
+        imagePath: 'images/fire.jpg',
         reading: 'ka / hi',
         meaning: 'fire',
         example: '火曜日 (kayoubi) = Tuesday'
     },
     {
         kanji: '水',
+        imagePath: 'images/water.jpg',
         reading: 'sui / mizu',
         meaning: 'water',
         example: '水曜日 (suiyoubi) = Wednesday'
     },
     {
         kanji: '木',
+        imagePath: 'images/tree.jpg',
         reading: 'moku, boku / ki',
         meaning: 'tree, wood',
         example: '木曜日 (mokuyoubi) = Thursday'
     },
     {
         kanji: '金',
+        imagePath: 'images/gold.jpg',
         reading: 'kin, kon / kane',
         meaning: 'gold, metal, money',
         example: '金曜日 (kinyoubi) = Friday'
     },
     {
         kanji: '土',
+        imagePath: 'images/soil.jpg',
         reading: 'do, to / tsuchi',
         meaning: 'earth, soil',
         example: '土曜日 (doyoubi) = Saturday'
     },
     {
         kanji: '人',
+        imagePath: 'images/person.jpg',
         reading: 'jin, nin / hito',
         meaning: 'person, people',
         example: '日本人 (nihonjin) = Japanese person'
     },
     {
         kanji: '山',
+        imagePath: 'images/mountain.jpg',
         reading: 'san, zan / yama',
         meaning: 'mountain',
         example: '富士山 (fujisan) = Mt. Fuji'
     },
     {
         kanji: '川',
+        imagePath: 'images/river.jpg',
         reading: 'sen / kawa',
         meaning: 'river',
         example: '川口 (kawaguchi) = river mouth'
     },
     {
         kanji: '田',
+        imagePath: 'images/field.jpg',
         reading: 'den / ta',
         meaning: 'rice field',
         example: '田中 (tanaka) = common surname'
     },
     {
         kanji: '本',
+        imagePath: 'images/book.jpg',
         reading: 'hon / moto',
         meaning: 'book, origin',
         example: '日本 (nihon) = Japan'
     },
     {
         kanji: '学',
+        imagePath: 'images/study.jpg',
         reading: 'gaku / mana(bu)',
         meaning: 'study, learning',
         example: '学生 (gakusei) = student'
     },
     {
         kanji: '校',
+        imagePath: 'images/school.jpg',
         reading: 'kou',
         meaning: 'school',
         example: '学校 (gakkou) = school'
     },
     {
         kanji: '生',
+        imagePath: 'images/life.jpg',
         reading: 'sei, shou / i(kiru)',
         meaning: 'life, birth, raw',
         example: '先生 (sensei) = teacher'
