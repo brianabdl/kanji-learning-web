@@ -233,6 +233,129 @@ const compoundWords = [
     }
 ];
 
+// Hiragana Word Bank - For Game 4
+const hiraganaWordBank = [
+    {
+        hiragana: 'はな',
+        meaning: 'flower',
+        romaji: 'hana',
+        kanjiOptions: ['花', '鼻', '話'],
+        correctKanji: '花'
+    },
+    {
+        hiragana: 'ねこ',
+        meaning: 'cat',
+        romaji: 'neko',
+        kanjiOptions: ['猫', '根', '寝'],
+        correctKanji: '猫'
+    },
+    {
+        hiragana: 'いぬ',
+        meaning: 'dog',
+        romaji: 'inu',
+        kanjiOptions: ['犬', '大', '太'],
+        correctKanji: '犬'
+    },
+    {
+        hiragana: 'そら',
+        meaning: 'sky',
+        romaji: 'sora',
+        kanjiOptions: ['空', '宗', '倉'],
+        correctKanji: '空'
+    },
+    {
+        hiragana: 'やま',
+        meaning: 'mountain',
+        romaji: 'yama',
+        kanjiOptions: ['山', '矢', '休'],
+        correctKanji: '山'
+    },
+    {
+        hiragana: 'うみ',
+        meaning: 'sea',
+        romaji: 'umi',
+        kanjiOptions: ['海', '産', '膿'],
+        correctKanji: '海'
+    },
+    {
+        hiragana: 'かわ',
+        meaning: 'river',
+        romaji: 'kawa',
+        kanjiOptions: ['川', '河', '皮'],
+        correctKanji: '川'
+    },
+    {
+        hiragana: 'ほん',
+        meaning: 'book',
+        romaji: 'hon',
+        kanjiOptions: ['本', '木', '体'],
+        correctKanji: '本'
+    },
+    {
+        hiragana: 'すし',
+        meaning: 'sushi',
+        romaji: 'sushi',
+        kanjiOptions: ['寿司', '酢', '司'],
+        correctKanji: '寿司'
+    },
+    {
+        hiragana: 'あめ',
+        meaning: 'rain',
+        romaji: 'ame',
+        kanjiOptions: ['雨', '飴', '天'],
+        correctKanji: '雨'
+    },
+    {
+        hiragana: 'ひ',
+        meaning: 'fire',
+        romaji: 'hi',
+        kanjiOptions: ['火', '日', '氷'],
+        correctKanji: '火'
+    },
+    {
+        hiragana: 'みず',
+        meaning: 'water',
+        romaji: 'mizu',
+        kanjiOptions: ['水', '氷', '泳'],
+        correctKanji: '水'
+    },
+    {
+        hiragana: 'き',
+        meaning: 'tree',
+        romaji: 'ki',
+        kanjiOptions: ['木', '気', '来'],
+        correctKanji: '木'
+    },
+    {
+        hiragana: 'ひと',
+        meaning: 'person',
+        romaji: 'hito',
+        kanjiOptions: ['人', '入', '火'],
+        correctKanji: '人'
+    },
+    {
+        hiragana: 'くち',
+        meaning: 'mouth',
+        romaji: 'kuchi',
+        kanjiOptions: ['口', '日', '田'],
+        correctKanji: '口'
+    }
+];
+
+// All hiragana characters for grid generation
+const allHiragana = [
+    'あ', 'い', 'う', 'え', 'お',
+    'か', 'き', 'く', 'け', 'こ',
+    'さ', 'し', 'す', 'せ', 'そ',
+    'た', 'ち', 'つ', 'て', 'と',
+    'な', 'に', 'ぬ', 'ね', 'の',
+    'は', 'ひ', 'ふ', 'へ', 'ほ',
+    'ま', 'み', 'む', 'め', 'も',
+    'や', 'ゆ', 'よ',
+    'ら', 'り', 'る', 'れ', 'ろ',
+    'わ', 'を', 'ん'
+];
+
 // Utility function to get random elements from array
 function getRandomElements(arr, count) {
     const shuffled = [...arr].sort(() => 0.5 - Math.random());

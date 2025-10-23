@@ -14,7 +14,7 @@ Website interaktif sederhana untuk mempelajari karakter Kanji Jepang dengan mini
 - Tes cepat untuk memperkuat pembelajaran
 - Navigasi antar karakter
 
-### 3. **Tiga Mini-Game**
+### 3. **Empat Mini-Game**
 
 #### 🔢 Belajar Angka (game1.html)
 - Pengenalan angka 1-10 dalam Kanji
@@ -22,10 +22,10 @@ Website interaktif sederhana untuk mempelajari karakter Kanji Jepang dengan mini
 - Sistem skor dan umpan balik
 - Maksimal 10 pertanyaan per sesi
 
-#### 🔗 Pasangkan Kanji (game2.html)
-- Cocokkan karakter kanji dengan artinya
+#### 🔗 Pasangkan Gambar & Kanji (game2.html)
+- Cocokkan gambar dengan karakter kanji yang sesuai
 - Batas waktu 60 detik
-- Klik kanji dan arti untuk membuat pasangan
+- Klik gambar dan kanji untuk membuat pasangan
 - Skor: 10 poin per pasangan
 
 #### ⚡ Kuis Cepat (game3.html)
@@ -33,6 +33,13 @@ Website interaktif sederhana untuk mempelajari karakter Kanji Jepang dengan mini
 - Pertanyaan pilihan ganda
 - Pelacakan skor tertinggi dengan localStorage
 - Papan peringkat 5 teratas
+
+#### 🧩 Susun Kata Hiragana (game4.html)
+- Temukan dan bentuk kata-kata Jepang dari grid hiragana 8×8
+- Pilih karakter yang bersebelahan (horizontal atau vertikal)
+- Validasi kata dan cocokkan dengan kanji yang benar
+- Dukungan mouse drag dan touch untuk mobile
+- Sistem skor berdasarkan panjang kata
 
 ## Teknologi yang Digunakan
 
@@ -48,18 +55,20 @@ Website interaktif sederhana untuk mempelajari karakter Kanji Jepang dengan mini
 Project_PBJepang/
 ├── index.html          # Welcome/login page
 ├── study.html          # Main study page with kanji learning
-├── game1.html          # Word Builder game
-├── game2.html          # Kanji Match game
+├── game1.html          # Number Learning game
+├── game2.html          # Image-Kanji Match game
 ├── game3.html          # Speed Quiz game
+├── game4.html          # Hiragana Word Formation game
 ├── css/
 │   └── style.css       # Custom styles
 └── js/
     ├── main.js         # Utility functions
-    ├── kanjiData.js    # Kanji data and helper functions
+    ├── kanjiData.js    # Kanji and hiragana data
     ├── study.js        # Study page logic
-    ├── game1.js        # Word Builder game logic
-    ├── game2.js        # Kanji Match game logic
-    └── game3.js        # Speed Quiz game logic
+    ├── game1.js        # Number Learning game logic
+    ├── game2.js        # Image-Kanji Match game logic
+    ├── game3.js        # Speed Quiz game logic
+    └── game4.js        # Hiragana Word Formation game logic
 ```
 
 ## Cara Menggunakan
