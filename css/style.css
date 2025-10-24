@@ -283,12 +283,18 @@ body {
     background-clip: text;
 }
 
+.hiragana-row {
+    /* Reset styles */
+    display: contents;
+}
+
 /* Game 4 - Hiragana Grid Styles */
 .hiragana-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 1fr; /* keep square cells */
     gap: 8px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 15px;
     user-select: none;
     -webkit-user-select: none;
@@ -385,25 +391,26 @@ body {
 
 /* Responsive Grid */
 @media (max-width: 768px) {
-    .hiragana-grid {
+    /* .hiragana-grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 6px;
         padding: 15px;
     }
-    
+     */
     .hiragana-cell {
         font-size: 1.4rem;
     }
 }
 
 @media (max-width: 576px) {
-    .hiragana-grid {
+    /* .hiragana-grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 4px;
         padding: 10px;
     }
-    
+     */
     .hiragana-cell {
         font-size: 1.2rem;
     }
 }
+

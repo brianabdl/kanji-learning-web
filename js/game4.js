@@ -149,7 +149,6 @@ function renderGrid() {
                 cell.addEventListener('mousedown', (e) => {
                     e.preventDefault();
                     startSelection(row, col);
-                    console.log('mousedown', row, col);
                 });
                 
                 cell.addEventListener('mouseenter', () => {
@@ -187,15 +186,21 @@ function renderGrid() {
                     endSelection();
                 }, { passive: false });
             })(i, j);
-            
+
             hiraganaGrid.appendChild(cell);
         }
     }
 }
 
 function startSelection(row, col) {
+    // If starting a new selection (not currently selecting)
+    // then clear the previous selection
+    if (!isSelectingPath) {
+        selectedCells = [];
+        updateSelectedWord();
+        highlightSelection();
+    }
     isSelectingPath = true;
-    // clearSelection();
     addToSelection(row, col);
 }
 
