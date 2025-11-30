@@ -4,71 +4,71 @@ const kanjiNumbers = [
         kanji: '一',
         reading: 'ichi',
         number: 1,
-        meaning: 'satu',
-        example: '一人 (hitori) = satu orang'
+        meaning: 'one',
+        example: '一人 (hitori) = one person'
     },
     {
         kanji: '二',
         reading: 'ni',
         number: 2,
-        meaning: 'dua',
-        example: '二人 (futari) = dua orang'
+        meaning: 'two',
+        example: '二人 (futari) = two people'
     },
     {
         kanji: '三',
         reading: 'san',
         number: 3,
-        meaning: 'tiga',
-        example: '三月 (sangatsu) = Maret'
+        meaning: 'three',
+        example: '三月 (sangatsu) = March'
     },
     {
         kanji: '四',
         reading: 'shi / yon',
         number: 4,
-        meaning: 'empat',
+        meaning: 'four',
         example: '四月 (shigatsu) = April'
     },
     {
         kanji: '五',
         reading: 'go',
         number: 5,
-        meaning: 'lima',
-        example: '五月 (gogatsu) = Mei'
+        meaning: 'five',
+        example: '五月 (gogatsu) = May'
     },
     {
         kanji: '六',
         reading: 'roku',
         number: 6,
-        meaning: 'enam',
-        example: '六月 (rokugatsu) = Juni'
+        meaning: 'six',
+        example: '六月 (rokugatsu) = June'
     },
     {
         kanji: '七',
         reading: 'shichi / nana',
         number: 7,
-        meaning: 'tujuh',
-        example: '七月 (shichigatsu) = Juli'
+        meaning: 'seven',
+        example: '七月 (shichigatsu) = July'
     },
     {
         kanji: '八',
         reading: 'hachi',
         number: 8,
-        meaning: 'delapan',
-        example: '八月 (hachigatsu) = Agustus'
+        meaning: 'eight',
+        example: '八月 (hachigatsu) = August'
     },
     {
         kanji: '九',
         reading: 'kyuu / ku',
         number: 9,
-        meaning: 'sembilan',
+        meaning: 'nine',
         example: '九月 (kugatsu) = September'
     },
     {
         kanji: '十',
         reading: 'juu',
         number: 10,
-        meaning: 'sepuluh',
-        example: '十月 (juugatsu) = Oktober'
+        meaning: 'ten',
+        example: '十月 (juugatsu) = October'
     }
 ];
 
@@ -78,106 +78,106 @@ const kanjiData = [
         kanji: '日',
         imagePath: 'images/sun.jpg',
         reading: 'nichi, jitsu / hi',
-        meaning: 'matahari, hari',
-        example: '日本 (nihon) = Jepang'
+        meaning: 'sun, day',
+        example: '日本 (nihon) = Japan'
     },
     {
         kanji: '月',
         imagePath: 'images/moon.jpg',
         reading: 'getsu, gatsu / tsuki',
-        meaning: 'bulan, bulan (waktu)',
-        example: '一月 (ichigatsu) = Januari'
+        meaning: 'moon, month',
+        example: '一月 (ichigatsu) = January'
     },
     {
         kanji: '火',
         imagePath: 'images/fire.jpg',
         reading: 'ka / hi',
-        meaning: 'api',
-        example: '火曜日 (kayoubi) = Selasa'
+        meaning: 'fire',
+        example: '火曜日 (kayoubi) = Tuesday'
     },
     {
         kanji: '水',
         imagePath: 'images/water.jpg',
         reading: 'sui / mizu',
-        meaning: 'air',
-        example: '水曜日 (suiyoubi) = Rabu'
+        meaning: 'water',
+        example: '水曜日 (suiyoubi) = Wednesday'
     },
     {
         kanji: '木',
         imagePath: 'images/tree.jpg',
         reading: 'moku, boku / ki',
-        meaning: 'pohon, kayu',
-        example: '木曜日 (mokuyoubi) = Kamis'
+        meaning: 'tree, wood',
+        example: '木曜日 (mokuyoubi) = Thursday'
     },
     {
         kanji: '金',
         imagePath: 'images/gold.jpg',
         reading: 'kin, kon / kane',
-        meaning: 'emas, logam, uang',
-        example: '金曜日 (kinyoubi) = Jumat'
+        meaning: 'gold, metal, money',
+        example: '金曜日 (kinyoubi) = Friday'
     },
     {
         kanji: '土',
         imagePath: 'images/soil.jpg',
         reading: 'do, to / tsuchi',
-        meaning: 'tanah, tanah liat',
-        example: '土曜日 (doyoubi) = Sabtu'
+        meaning: 'earth, soil',
+        example: '土曜日 (doyoubi) = Saturday'
     },
     {
         kanji: '人',
         imagePath: 'images/person.jpg',
         reading: 'jin, nin / hito',
-        meaning: 'orang, manusia',
-        example: '日本人 (nihonjin) = orang Jepang'
+        meaning: 'person, people',
+        example: '日本人 (nihonjin) = Japanese person'
     },
     {
         kanji: '山',
         imagePath: 'images/mountain.jpg',
         reading: 'san, zan / yama',
-        meaning: 'gunung',
-        example: '富士山 (fujisan) = Gunung Fuji'
+        meaning: 'mountain',
+        example: '富士山 (fujisan) = Mt. Fuji'
     },
     {
         kanji: '川',
         imagePath: 'images/river.jpg',
         reading: 'sen / kawa',
-        meaning: 'sungai',
-        example: '川口 (kawaguchi) = muara sungai'
+        meaning: 'river',
+        example: '川口 (kawaguchi) = river mouth'
     },
     {
         kanji: '田',
         imagePath: 'images/field.jpg',
         reading: 'den / ta',
-        meaning: 'sawah',
-        example: '田中 (tanaka) = nama keluarga umum'
+        meaning: 'rice field',
+        example: '田中 (tanaka) = common surname'
     },
     {
         kanji: '本',
         imagePath: 'images/book.jpg',
         reading: 'hon / moto',
-        meaning: 'buku, asal',
-        example: '日本 (nihon) = Jepang'
+        meaning: 'book, origin',
+        example: '日本 (nihon) = Japan'
     },
     {
         kanji: '学',
         imagePath: 'images/study.jpg',
         reading: 'gaku / mana(bu)',
-        meaning: 'belajar, pembelajaran',
-        example: '学生 (gakusei) = pelajar'
+        meaning: 'study, learning',
+        example: '学生 (gakusei) = student'
     },
     {
         kanji: '校',
         imagePath: 'images/school.jpg',
         reading: 'kou',
-        meaning: 'sekolah',
-        example: '学校 (gakkou) = sekolah'
+        meaning: 'school',
+        example: '学校 (gakkou) = school'
     },
     {
         kanji: '生',
         imagePath: 'images/life.jpg',
         reading: 'sei, shou / i(kiru)',
-        meaning: 'kehidupan, kelahiran, mentah',
-        example: '先生 (sensei) = guru'
+        meaning: 'life, birth, raw',
+        example: '先生 (sensei) = teacher'
     }
 ];
 
@@ -186,49 +186,49 @@ const compoundWords = [
     {
         word: '日本',
         kanji: ['日', '本'],
-        meaning: 'Jepang',
+        meaning: 'Japan',
         reading: 'nihon'
     },
     {
         word: '学校',
         kanji: ['学', '校'],
-        meaning: 'sekolah',
+        meaning: 'school',
         reading: 'gakkou'
     },
     {
         word: '学生',
         kanji: ['学', '生'],
-        meaning: 'pelajar',
+        meaning: 'student',
         reading: 'gakusei'
     },
     {
         word: '日本人',
         kanji: ['日', '本', '人'],
-        meaning: 'orang Jepang',
+        meaning: 'Japanese person',
         reading: 'nihonjin'
     },
     {
         word: '水曜日',
         kanji: ['水', '曜', '日'],
-        meaning: 'Rabu',
+        meaning: 'Wednesday',
         reading: 'suiyoubi'
     },
     {
         word: '火山',
         kanji: ['火', '山'],
-        meaning: 'gunung berapi',
+        meaning: 'volcano',
         reading: 'kazan'
     },
     {
         word: '金田',
         kanji: ['金', '田'],
-        meaning: 'Kaneda (nama keluarga)',
+        meaning: 'Kaneda (surname)',
         reading: 'kaneda'
     },
     {
         word: '山田',
         kanji: ['山', '田'],
-        meaning: 'Yamada (nama keluarga)',
+        meaning: 'Yamada (surname)',
         reading: 'yamada'
     }
 ];
@@ -237,56 +237,56 @@ const compoundWords = [
 const hiraganaWordBank = [
     {
         hiragana: 'はな',
-        meaning: 'bunga',
+        meaning: 'flower',
         romaji: 'hana',
         kanjiOptions: ['花', '鼻', '話'],
         correctKanji: '花'
     },
     {
         hiragana: 'ねこ',
-        meaning: 'kucing',
+        meaning: 'cat',
         romaji: 'neko',
         kanjiOptions: ['猫', '根', '寝'],
         correctKanji: '猫'
     },
     {
         hiragana: 'いぬ',
-        meaning: 'anjing',
+        meaning: 'dog',
         romaji: 'inu',
         kanjiOptions: ['犬', '大', '太'],
         correctKanji: '犬'
     },
     {
         hiragana: 'そら',
-        meaning: 'langit',
+        meaning: 'sky',
         romaji: 'sora',
         kanjiOptions: ['空', '宗', '倉'],
         correctKanji: '空'
     },
     {
         hiragana: 'やま',
-        meaning: 'gunung',
+        meaning: 'mountain',
         romaji: 'yama',
         kanjiOptions: ['山', '矢', '休'],
         correctKanji: '山'
     },
     {
         hiragana: 'うみ',
-        meaning: 'laut',
+        meaning: 'sea',
         romaji: 'umi',
         kanjiOptions: ['海', '産', '膿'],
         correctKanji: '海'
     },
     {
         hiragana: 'かわ',
-        meaning: 'sungai',
+        meaning: 'river',
         romaji: 'kawa',
         kanjiOptions: ['川', '河', '皮'],
         correctKanji: '川'
     },
     {
         hiragana: 'ほん',
-        meaning: 'buku',
+        meaning: 'book',
         romaji: 'hon',
         kanjiOptions: ['本', '木', '体'],
         correctKanji: '本'
@@ -300,42 +300,42 @@ const hiraganaWordBank = [
     },
     {
         hiragana: 'あめ',
-        meaning: 'hujan',
+        meaning: 'rain',
         romaji: 'ame',
         kanjiOptions: ['雨', '飴', '天'],
         correctKanji: '雨'
     },
     {
         hiragana: 'ひ',
-        meaning: 'api',
+        meaning: 'fire',
         romaji: 'hi',
         kanjiOptions: ['火', '日', '氷'],
         correctKanji: '火'
     },
     {
         hiragana: 'みず',
-        meaning: 'air',
+        meaning: 'water',
         romaji: 'mizu',
         kanjiOptions: ['水', '氷', '泳'],
         correctKanji: '水'
     },
     {
         hiragana: 'き',
-        meaning: 'pohon',
+        meaning: 'tree',
         romaji: 'ki',
         kanjiOptions: ['木', '気', '来'],
         correctKanji: '木'
     },
     {
         hiragana: 'ひと',
-        meaning: 'orang',
+        meaning: 'person',
         romaji: 'hito',
         kanjiOptions: ['人', '入', '火'],
         correctKanji: '人'
     },
     {
         hiragana: 'くち',
-        meaning: 'mulut',
+        meaning: 'mouth',
         romaji: 'kuchi',
         kanjiOptions: ['口', '日', '田'],
         correctKanji: '口'
